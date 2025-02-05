@@ -4,8 +4,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Mostrar Variables de GitHub
-        run: |
-          echo "Repositorio: ${{ github.repository }}"
-          echo "Actor: ${{ github.actor }}"
-          echo "Evento: ${{ github.event_name }}"
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas
+        run: npm test
