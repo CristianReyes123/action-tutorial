@@ -3,10 +3,13 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-        MI_VARIABLE: "¡Hola desde GitHub Actions!"
-
     steps:
-        - name: Mostrar Variable
-          run: echo "El valor de la variable es $MI_VARIABLE"
-  
+      - name: Verificar Plataforma
+        run: |
+          if [ "$PLATAFORMA" == "AWS" ]; then
+            echo "Se está ejecutando en AWS"
+          else
+            echo "No es AWS"
+          fi
+    env:
+      PLATAFORMA: "AWS"
