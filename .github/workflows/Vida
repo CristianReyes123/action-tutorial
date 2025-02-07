@@ -12,7 +12,7 @@ class Vida
 
     public void TomarDaño(int daño)
     {
-        vida -=daño;
+        vida = Math.Max(vida - daño, 0); //Evitamos que la vida salga negativa
         console.writeLine("Te hicieron daño. La vida restante es: " + vida);
     }
 
