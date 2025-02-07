@@ -1,0 +1,38 @@
+using System;
+
+class Vida
+{
+    public int vida;
+    public int maximo = 100;
+
+    public VIda(int v)
+    {
+        Vida = v;
+    }
+
+    public void TomarDaño(int daño)
+    {
+        vida -=daño;
+        console.writeLine("Te hicieron daño. La vida restante es: " + vida);
+    }
+
+    public void Curaar(int cantidad)
+    {
+        vida += cantidad;
+        console.writeLine ("Te curaste. La vida actual es: " + vida);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Vida jugador = new Vida(120);
+
+        jugador.TomarDaño(50);
+        jugador.Curar(20);
+        jugador.Tomardaño(120);
+
+        Console.WriteLine("Game Over");
+    }
+}
