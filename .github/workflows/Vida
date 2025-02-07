@@ -32,6 +32,7 @@ class Program
         jugador.TomarDaño(50);
         jugador.Curar(20);
         jugador.Tomardaño(120);
+        // se agrega un mensaje en sonsola que se termino el juego.
 
         Console.WriteLine("Game Over");
     }
