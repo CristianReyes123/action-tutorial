@@ -27,7 +27,7 @@ class Program
 {
     static void Main()
     {
-        Vida jugador = new Vida(120);
+        Vida jugador = new Vida(120); // Se ajusta automaticamente a 100
 
         jugador.TomarDaño(50);
         jugador.Curar(20);
