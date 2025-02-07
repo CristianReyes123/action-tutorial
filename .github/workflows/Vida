@@ -18,7 +18,7 @@ class Vida
 
     public void Curaar(int cantidad)
     {
-        vida += cantidad;
+        vida = Math.min(vida + cantidad, maximo); // No permite que la vida supere el maximo
         console.writeLine ("Te curaste. La vida actual es: " + vida);
     }
 }
