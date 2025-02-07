@@ -5,9 +5,9 @@ class Vida
     public int vida;
     public int maximo = 100;
 
-    public VIda(int v)
+    public Vida(int v) //Corregi el nombre de vida para que no diera error a la hora de validar la vida inicial
     {
-        Vida = v;
+        Vida =Math.Clamp(v, o, maximo); //Aseguramos de que la vida inicial este en el rango que establecimos 
     }
 
     public void TomarDaño(int daño)
