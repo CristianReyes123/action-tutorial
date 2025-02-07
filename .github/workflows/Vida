@@ -37,3 +37,5 @@ class Program
         Console.WriteLine("Game Over");
     }
 }
+
+// proyecto de vida, curacion, daño y vida del jugador modificados y se da como finalizado.
